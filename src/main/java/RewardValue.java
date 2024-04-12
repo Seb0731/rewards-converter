@@ -8,22 +8,22 @@ public class RewardValue {
     }
 
     RewardValue(int miles) {
-        this.miles = milesToCash(miles);
+        this.miles = miles;
     }
-
-    public static int cashToMiles(double cash) {
-        return (int) (cash / MILESTOCASHCONVERSION);
-    }
-
-    public static double milesToCash(int miles) {
-        return miles * MILESTOCASHCONVERSION;
-    }
-
+    
     public double getCashValue() {
         return this.cash ;
     }
     public double getMilesValue() {
-        return cashToMiles(this.cash);
+        return this.miles;
+    }
+
+    public int cashToMiles(double cash) {
+        return (int) (cash / MILESTOCASHCONVERSION);
+    }
+
+    public double milesToCash(int miles) {
+        return miles * MILESTOCASHCONVERSION;
     }
 
 
